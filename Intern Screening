@@ -26,7 +26,7 @@ Class File_Dir(files:str, path):
                         print(f" you've obtained the right answer: {Name}").format(str)
                     else:
                     AlertError as E:
-                        print(f' please check your code and refactor:')
+                        print(f' please check your code and refactor.')
 
 #2
             Def AvgNumberPetsPercity(PetsAve:int, ResultsPercent:float):
@@ -41,7 +41,7 @@ Class File_Dir(files:str, path):
                         print(f" you've obtained the correct answer: {ResultsPercent}")
                     Else:
                     AlertError as E:
-                        print(f" please check your code and refactor") 
+                        print(f" please check your code and refactor.") 
 
 #3 & 4
             Def OwnersSpent(Amount:int,str, Twenty):
@@ -54,7 +54,7 @@ Class File_Dir(files:str, path):
                         print(f" you've obtained the correct answer: {Twenty}.format(int)")
                 Else:
                 AlertError as E:
-                    print(f" please check your code and refactor")
+                    print(f" please check your code and refactor.")
 
                 
 #4
@@ -70,24 +70,48 @@ Class File_Dir(files:str, path):
             Def OwnersPetsWithSameLetter(Letter:str):
                 Letter = super().Tidy_Data.select(['Surname','Name').filter(key = regex'\b[A-Z]{1}').upper()
                 Sur, Nam = [ Sur[i], Nam[a] if Letter.select(['Surname']).is_in(regex= "r'\b[A:Z]{1}'") & \
-                           Letter.select(['Name']).is_in(regex= "r'\b[A-Z]{1}") \
-                           else None for i, a in letter.select(['Surname','Name']) ]
+                    Letter.select(['Name']).is_in(regex= "r'\b[A-Z]{1}") \
+                    else None for i, a in letter.select(['Surname','Name']) ]
+                if Sur[:] == Nam[:] do:
+                    sum = Sur[:].cumsum()
+                    if sum == [5, 6, 7, 8]
+                        print(f" you've obtained the correct answer: {sum}.format(int)")
+                    Else:
+                    AlertError as E:
+                        print(f" please check your code and refactor.")
+                Else:
+                    print(f" there's been an error")
 #6
             Def Vaccination(Vaccinated:str):
                 Vaccinated = super().Tidy_Data.Select(['VACCINATIONS', 'Kind']).is_in(['Dog','Cat','Parrot']).unique().cumsum().format(int)
                 Total_Vaccinated = super().Tidy_Data.Select(['VACCINATIONS']).cumsum()
-                Percent_vaccinated = (Vaccinated / Total_Vaccinated).format(float: %.2f)
+                Percent_vaccinated = (Vaccinated / Total_Vaccinated).format(float:.2f)
+                    return Percent_vaccinated
                 if Percent_vaccinated == [20, 24, 30, 34] do:
-                    print(f" you've obtained the right answer: {Percent_vaccinated}.format(float: %.2f)")
+                    print(f" you've obtained the right answer: {Percent_vaccinated}.format(float:.2f)")
                 Else:
                 AlertError as E:
-                    print(f" please check your code and refactor")
+                    print(f" please check your code and refactor.")
 #7
             Def MalePets_FemalePets(PetCount:int):
                 PetCount = super().Tidy_Data.Select(['City','Kind']).is_in(['male','female']).unique().cumsum().format(int)
                 Male = PetCount.select(['male']).cumsum().format(int)
-                Female = 
+                Female = Petcont.select('female']).cumsum().format(int)
+                Percent_MalePets = (Male / Petcount).format(float:.2f)
+                Percent_FemalePets = (Female / Petcount).format(float:.2f)
+                if (Percent_MalePets > Percent_FemalePets) == [54.5, 57.5, 64.5, 67.5]
+                    print(f" you've obtained the right answer: {Percent_MalePets}.format(float:.2f)")
+                Else:
+                AlertError as E:
+                    print(f" please check your code and refactor.") 
 #8
             Def ExactDogsPercent(dogs:int):    
-                dogs = super().Tidy_Data.Select(['City', 'Kind']).is_in(['dog']).
+                dogs = super().Tidy_Data.unique(select(['City', 'Kind']).is_in(['dog'])).cumsum()
+                MostDog_City = dogs.unique(select(['Dog','City'])).max()
+                ExactPercent = (MostDog_City \ dogs).format(float:.2f)
+                if ExactPercent == [70.0] do:
+                    print(f" you've obtained the correct answer: {ExactPercent}")
+                Else:
+                AlertError as E:
+                    print(f" please check your code and refactor.")
         
