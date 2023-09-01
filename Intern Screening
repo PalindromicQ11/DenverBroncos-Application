@@ -22,10 +22,10 @@ Class File_Dir(files:str, path):
 #1
             Def Oldest_Dog_Southfield(Name:str):
                 Name = super().Tidy_Data.select(['Kind','Name','Age']).is_in('Dog').max(int)
-                    if Name == ['Crocket','Peanut','Cuddles','...'] do:
+                Try:
+                    Assert: Name == ['Crocket','Peanut','Cuddles','...'] do:
                         print(f" you've obtained the right answer: {Name}").format(str)
-                    else:
-                    AlertError as E:
+                Except Error as E:
                         print(f' please check your code and refactor.')
 
 #2
@@ -37,10 +37,10 @@ Class File_Dir(files:str, path):
                 AverageMean = [IndivCityNumber[i] for in in IndivCityNumber.iteritems()] 
                 Results = AverageMean / PetsAvg
                 ResultsPercent = Results.format(float: %.2f)
-                    if ResultsPercent == [1.5, 2.0, 2.5, 3.0] do:
+                Try:
+                    Assert: ResultsPercent == [1.5, 2.0, 2.5, 3.0] do:
                         print(f" you've obtained the correct answer: {ResultsPercent}")
-                    Else:
-                    AlertError as E:
+                    Except Error as AlertError:
                         print(f" please check your code and refactor.") 
 
 #3 & 4
@@ -109,9 +109,9 @@ Class File_Dir(files:str, path):
                 dogs = super().Tidy_Data.unique(select(['City', 'Kind']).is_in(['dog'])).cumsum()
                 MostDog_City = dogs.unique(select(['Dog','City'])).max()
                 ExactPercent = (MostDog_City \ dogs).format(float:.2f)
-                if ExactPercent == [70.0] do:
-                    print(f" you've obtained the correct answer: {ExactPercent}")
-                Else:
-                AlertError as E:
-                    print(f" please check your code and refactor.")
+                Try:
+                    Assert: ExactPercent == [70.0]:
+                        print(f" you've obtained the correct answer: {ExactPercent}")
+                    Except Error as AlertError:
+                        print(f" please check your code and refactor. Do unto others as do unto you & and get a life!")
         
